@@ -6,35 +6,37 @@
 </head>
 <body>
     <script>
-        let array = new Array(40)
-        for (let i = 0; i < array.length; i++) {
-            array[i] = Math.floor(Math.random() * 100)
-        }
-        document.write("Mang nay bao gom ca phan tu la [ " + array + " ]" + "<br>" )
-        // ham kiem tra xem 1 so co phai la so nguyen to
-        function isPrime(n) {
-            if (n === 1 || n === 0) {
-                return false;
+        function calculateTotalPrime() {
+            let array = new Array(40)
+            for (let i = 0; i < array.length; i++) {
+                array[i] = Math.floor(Math.random() * 100)
             }
-            else if (n === 2) {
-                return true;
-            } else {
-                for (let x = 2; x < n; x++) {
-                    if (n % x === 0) {
-                        return false;
+            document.write("Mang nay bao gom ca phan tu la [ " + array + " ]" + "<br>")
+            // ham kiem tra xem 1 so co phai la so nguyen to
+            function isPrime(n) {
+                if (n === 1 || n === 0) {
+                    return false;
+                } else if (n === 2) {
+                    return true;
+                } else {
+                    for (let x = 2; x < n; x++) {
+                        if (n % x === 0) {
+                            return false;
+                        }
                     }
+                    return true;
                 }
-                return true;
             }
-        }
-        // tinh tong cua nhung so la so nguyen to
-        let total = 0
-        for (let i = 0; i < array.length; i++) {
-            if (isPrime(array[i])) {
-                total = total + array[i]
+            // tinh tong cua nhung so la so nguyen to
+            let total = 0
+            for (let i = 0; i < array.length; i++) {
+                if (isPrime(array[i])) {
+                    total = total + array[i]
+                }
             }
+            document.write("Tong cua so nguyen to trong mang la " + total)
         }
-        document.write("Tong cua so nguyen to trong mang la " + total)
+        calculateTotalPrime()
     </script>
 </body>
 </html>

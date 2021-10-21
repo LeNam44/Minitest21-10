@@ -6,30 +6,33 @@
 </head>
 <body>
     <script>
-        // kiem tra so nguyen to
-        function isPrime(n) {
-            if (n === 1 || n === 0) {
-                return false;
-            }
-            else if (n === 2) {
-                return true;
-            } else {
-                for (let x = 2; x < n; x++) {
-                    if (n % x === 0) {
-                        return false;
+        function calcTotal() {
+            // kiem tra so nguyen to
+            function isPrime(n) {
+                if (n === 1 || n === 0) {
+                    return false;
+                } else if (n === 2) {
+                    return true;
+                } else {
+                    for (let x = 2; x < n; x++) {
+                        if (n % x === 0) {
+                            return false;
+                        }
                     }
+                    return true;
                 }
-                return true;
             }
-        }
-        // Tinh tong
-        let total = 0
-        for (let i = 2; i < 500; i++) {
-            if (isPrime(i)) {
-                total = total + i
+
+            // Tinh tong
+            let total = 0
+            for (let i = 2; i < 500; i++) {
+                if (isPrime(i)) {
+                    total = total + i
+                }
             }
+            document.write("Tong cac so nguyen to nho hon 500 la " + total)
         }
-        document.write("Tong cac so nguyen to nho hon 500 la " + total)
+        calcTotal()
     </script>
 </body>
 </html>

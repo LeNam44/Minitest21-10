@@ -6,21 +6,24 @@
 </head>
 <body>
     <script>
-        // tao mang gom 30 phan tu ngau nhien tu 1 den 10
-        let array = new Array(30)
-        for (let i = 0; i < array.length; i++) {
-            array[i] = Math.floor(Math.random() * 11)
-        }
-        document.write("Mang bao gom cac phan tu [ " + array + " ]" + "<br>" )
-        // duyet mang, dem so lan xuat hien cua phan tu nhap vao
-        let number = +prompt("Nhap phan tu can dem (tu 1 den 10)")
-        let count = 0
-        for (let i = 0; i < array.length; i++) {
-            if (array[i] === number) {
-                count++
+        function countInputNumber() {
+            // tao mang gom 30 phan tu ngau nhien tu 1 den 10
+            let array = new Array(30)
+            for (let i = 0; i < array.length; i++) {
+                array[i] = Math.floor(Math.random() * 11)
             }
+            document.write("Mang bao gom cac phan tu [ " + array + " ]" + "<br>")
+            // duyet mang, dem so lan xuat hien cua phan tu nhap vao
+            let number = +prompt("Nhap phan tu can dem (tu 1 den 10)")
+            let count = 0
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === number) {
+                    count++
+                }
+            }
+            document.write("So luong phan tu " + number + " trong mang la " + count);
         }
-        document.write("So luong phan tu " + number + " trong mang la " + count)
+        countInputNumber()
     </script>
 </body>
 </html>

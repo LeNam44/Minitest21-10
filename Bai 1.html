@@ -6,11 +6,13 @@
 </head>
 <body>
     <script>
+        // tao mang gom 20 phan tu ngau nhien tu 0 den 30
         let array = new Array(20)
         for (let i = 0; i < array.length; i++) {
             array[i] = Math.floor(Math.random() * 30)
         }
         document.write("Mang co 20 phan tu, bao gom [ " + array + " ]" + "<br>" )
+        // duyen mang, dem so phan tu la so chan
         let count = 0;
         function isEven() {
             for (let i = 0; i < array.length; i++) {
@@ -20,7 +22,7 @@
             }
         }
         isEven()
-        document.write("So luong ca so chan la " + count + " so")
+        document.write("So luong cac so chan la " + count + " so")
     </script>
 </body>
 </html>

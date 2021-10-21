@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+    <script>
+        let array = new Array(20)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = Math.floor(Math.random() * 30)
+        }
+        document.write("Mang co 20 phan tu, bao gom [ " + array + " ]" + "<br>" )
+        let count = 0;
+        function isEven() {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] % 2 === 0) {
+                    count++
+                }
+            }
+        }
+        isEven()
+        document.write("So luong ca so chan la " + count + " so")
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+    <script>
+        let array = new Array(40)
+        for (let i = 0; i < array.length; i++) {
+            array[i] = Math.floor(Math.random() * 100)
+        }
+        document.write("Mang nay bao gom ca phan tu la [ " + array + " ]" + "<br>" )
+        let total = 0
+        function isPrime(n) {
+            if (n === 1 || n === 0) {
+                return false;
+            }
+            else if (n === 2) {
+                return true;
+            } else {
+                for (let x = 2; x < n; x++) {
+                    if (n % x === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
+
+        for (let i = 0; i < array.length; i++) {
+            if (isPrime(array[i])) {
+                total = total + array[i]
+            }
+        }
+        document.write("Tong cua so nguyen to trong mang la " + total)
+    </script>
+</body>
+</html>
